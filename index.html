@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game: The Office Themed</title>
+    <style>
+
+            body { /* Visual */ background: lightgrey;}
+      
+            #image-holder {
+      
+              /* Positioning */
+               margin: 0 auto;
+      
+              /* Box-model */
+              width: 400px;
+      
+              /* Typography */
+              text-align: center;
+      
+            }
+      
+            #buttons {
+      
+              /* Positioning */
+              margin: 50px 0;
+      
+              /* Typography */
+              text-align: center;
+      
+            }
+      
+            button {
+      
+              /* Box-model */
+              width: 200px;
+              height: 100px;
+      
+            }
+      
+          </style>      
+</head>
+<body>
+<div id="wrapper">
+    <h1>The Office Trivia!</h1>
+    <div id="buttons">
+            <button id="start"><h2>Start</h2></button>
+          </div>      
+    <div>Time Remaining: <span id="timer"></span></div>
+    <div id="question-answer"></div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js" type="text/javascript"></script>
+</body>
+</html>
