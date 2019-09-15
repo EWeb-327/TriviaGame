@@ -81,15 +81,16 @@ var incorrect = ["./assets/images/incorrect/Ryan2.gif", "./assets/images/incorre
 $("#start").click(startGame);
 
 function endGame(){
-    $("div").text("")
-    $("#question-answer").text("You scored " + score + "/" + trivia.length)
-    var restart = $("<button").text("Restart Game").addClass("reset")
-    $("question-answer").append(restart)
+    $("#question-answer").text("");
+    $("#question-answer").text("You scored " + score + "/" + trivia.length + "\n Press start to play again!");
+    $("#start").show()
+    score = 0
+   
 }
 function stop() {
     clearInterval(timer);
     loadImage('wrong')
-    setTimeout(nextQuestion, 5000);
+    setTimeout(nextQuestion, 4000);
 }
 function timerCount(){
     time --;
@@ -116,17 +117,17 @@ function displayQuestion(){
         if($(this).attr("data-value") == (trivia[count].correct)){
             score++
             loadImage('win')
-            setTimeout(nextQuestion, 5000);
+            setTimeout(nextQuestion, 4000);
         }else {
             loadImage('wrong')
-            setTimeout(nextQuestion, 5000);
+            setTimeout(nextQuestion, 4000);
         }
     })
 }
 function nextQuestion(){  
     var lastQuestion = (trivia.length -1) === count
     if (lastQuestion) {
-       console.log("game over")
+       endGame()
     } else {
         count++;
         displayQuestion()
