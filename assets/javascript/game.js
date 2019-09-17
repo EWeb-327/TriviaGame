@@ -106,6 +106,7 @@ function endGame() {
     $("#question-answer").text("You scored " + score + "/" + trivia.length + "! Press start to play again!");
     $("#start").show()
     score = 0
+    count = 0
 
 }
 function stop() {
